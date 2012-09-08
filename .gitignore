@@ -1,0 +1,2 @@
+# ignore macosx specific meta file
+.DS_Store
