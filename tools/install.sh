@@ -21,14 +21,22 @@ if [ -d $REBAR_TEMPLATES_DIR ]; then
   mv $REBAR_TEMPLATES_DIR $REBAR_TEMPLATES_DIR.pre-install-$TIMESTAMP
 fi
 
+
 echo "Cloning Rebar templates from GitHub... "
 /usr/bin/env git clone $REPO_URL $REBAR_TEMPLATES_DIR > /dev/null
 echo "done."
-echo "updateting ~/.bashrc"
+
+if [[ -n "${ZSH_VERSION}" ]]; then
+  TARGET_RC=.bashrc
+else
+  TARGET_RC=.zshrc
+fi
+
+echo "updateting ~/$TARGET_RC"
 echo "
 if [ -f "$HOME/.rebar/templates/tools/rebar_rc" ]; then
  source $HOME/.rebar/templates/tools/rebar_rc
 fi
-" >> ~/.bashrc
+" >> ~/$TARGET_RC
 echo "done."
 echo '... is now installed!'
