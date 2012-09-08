@@ -1,0 +1,6 @@
+# provide path for rebar
+export PATH=~/.rebar/templates/tools:$PATH
+
+# define alias
+alias rg='`which script/generate` || ~/.rebar/templates/common/script/generate'
+alias rp='rg project'
