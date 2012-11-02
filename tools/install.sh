@@ -36,14 +36,16 @@ cp rebar ../
 cd $CURRENT_DIR
 echo "done."
 
-TARGET_RC=.bashrc
+if [ ! -f "$HOME/.rebar/templates/tools/rebar_rc" ]; then
+  echo "updating ~/$TARGET_RC"
 
-echo "updating ~/$TARGET_RC"
-echo "
-if [ -f "$HOME/.rebar/templates/tools/rebar_rc" ]; then
- source $HOME/.rebar/templates/tools/rebar_rc
+  TARGET_RC=.bashrc
+  echo "
+  if [ -f "$HOME/.rebar/templates/tools/rebar_rc" ]; then
+   source $HOME/.rebar/templates/tools/rebar_rc
+  fi
+  " >> ~/$TARGET_RC
+  echo "done."
 fi
-" >> ~/$TARGET_RC
 
-echo "done."
 echo 'rebar_templates are installed!'

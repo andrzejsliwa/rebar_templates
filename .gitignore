@@ -1,2 +1,3 @@
 # ignore macosx specific meta file
 .DS_Store
+tools/rebar
