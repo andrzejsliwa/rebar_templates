@@ -32,14 +32,13 @@ echo "done."
 echo "Preparing current version of Rebar"
 git clone git://github.com/rebar/rebar.git $REBAR_REPO
 cd $REBAR_REPO
-#make
-#cp rebar ../
+make || true
+cp rebar $REBAR_TEMPLATES_TOOLS
 cd $CURRENT_DIR
 echo "done."
 
-echo "updating ~/$TARGET_RC"
-
 TARGET_RC=.bashrc
+echo "updating ~/$TARGET_RC"
 echo "
 if [ -f "$HOME/.rebar/templates/tools/rebar_rc" ]; then
  source $HOME/.rebar/templates/tools/rebar_rc
