@@ -35,4 +35,4 @@ if [ -f "$HOME/.rebar/templates/tools/rebar_rc" ]; then
 fi
 " >> ~/$TARGET_RC
 echo "done."
-echo '... is now installed!'
+echo 'rebar_templates are installed!'
