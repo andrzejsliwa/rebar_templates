@@ -26,13 +26,9 @@ echo "Cloning Rebar templates from GitHub... "
 /usr/bin/env git clone $REPO_URL $REBAR_TEMPLATES_DIR > /dev/null
 echo "done."
 
-if [[ -n "${ZSH_VERSION}" ]]; then
-  TARGET_RC=.bashrc
-else
-  TARGET_RC=.zshrc
-fi
+TARGET_RC=.bashrc
 
-echo "updateting ~/$TARGET_RC"
+echo "updating ~/$TARGET_RC"
 echo "
 if [ -f "$HOME/.rebar/templates/tools/rebar_rc" ]; then
  source $HOME/.rebar/templates/tools/rebar_rc
