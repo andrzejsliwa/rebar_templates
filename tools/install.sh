@@ -1,6 +1,7 @@
 #!/bin/bash
 
 CURRENT_DIR=`pwd`
+
 REBAR_DIR="$HOME/.rebar"
 REBAR_TEMPLATES_DIR="$REBAR_DIR/templates"
 REBAR_TEMPLATES_TOOLS="$REBAR_TEMPLATES_DIR/tools"
@@ -31,8 +32,8 @@ echo "done."
 echo "Preparing current version of Rebar"
 git clone git://github.com/rebar/rebar.git $REBAR_REPO
 cd $REBAR_REPO
-make
-cp rebar ../
+#make
+#cp rebar ../
 cd $CURRENT_DIR
 echo "done."
 
