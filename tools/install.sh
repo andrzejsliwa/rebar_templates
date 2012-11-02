@@ -32,6 +32,7 @@ echo "done."
 echo "Preparing current version of Rebar"
 git clone git://github.com/rebar/rebar.git $REBAR_REPO
 cd $REBAR_REPO
+set -x ; export PS4="+ \${BASH_SOURCE##\${rvm_path:-}} : \${FUNCNAME[0]:+\${FUNCNAME[0]}()}  \${LINENO} > "
 make
 cp rebar $REBAR_TEMPLATES_TOOLS
 cd $CURRENT_DIR
