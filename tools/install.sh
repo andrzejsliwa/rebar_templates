@@ -32,7 +32,7 @@ echo "done."
 echo "Preparing current version of Rebar"
 git clone git://github.com/rebar/rebar.git $REBAR_REPO
 cd $REBAR_REPO
-exec make
+make
 cp rebar $REBAR_TEMPLATES_TOOLS
 cd $CURRENT_DIR
 echo "done."
