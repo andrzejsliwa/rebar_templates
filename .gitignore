@@ -1,4 +1,2 @@
 # ignore macosx specific meta file
 .DS_Store
-tools/rebar
-tools/rebar_repo
