@@ -4,7 +4,7 @@ CURRENT_DIR=`pwd`
 REBAR_DIR="$HOME/.rebar"
 REBAR_TEMPLATES_DIR="$REBAR_DIR/templates"
 REBAR_TEMPLATES_TOOLS="$REBAR_TEMPLATES_DIR/tools"
-REBAR_REPO="$REBAR_TEMPLATES_TOOLS/rebar"
+REBAR_REPO="$REBAR_TEMPLATES_TOOLS/rebar_repo"
 REPO_URL=git://github.com/andrzejsliwa/rebar_templates.git
 
 echo "Checking to see if git is installed... "
